@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GPSOAuthSharp</id>
+    <version>1.0.0</version>
+    <title>GPSOAuthSharp.Nuget</title>
+    <authors>cormaltes</authors>
+    <description>
+      GPSOAuthSharp
+    </description>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+  </files>
+</package>
