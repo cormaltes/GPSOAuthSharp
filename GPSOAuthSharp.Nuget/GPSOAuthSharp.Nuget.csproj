@@ -54,7 +54,9 @@
     <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
     <None Include="NuGet.config" />
-    <None Include="Package.nuspec" />
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
@@ -86,4 +88,7 @@
     <Message Text="SUCCESS: Created package." Condition=" '$(Configuration)|$(Platform)|$(ExitCode)' == 'Debug|AnyCPU|0' " Importance="High" />
     <Message Text="SUCCESS: Published package." Condition=" '$(Configuration)|$(Platform)|$(ExitCode)' == 'Release|AnyCPU|0' " Importance="High" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>if $(ConfigurationName) == Release xcopy /Y $(SolutionDir)GPSOAuthSharp.NetCore\bin\Release\netstandard1.5\*.* $(ProjectDir)\lib\dnxcore50\</PreBuildEvent>
+  </PropertyGroup>
 </Project>

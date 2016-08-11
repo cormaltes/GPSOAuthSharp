@@ -2,12 +2,22 @@
 <package >
   <metadata>
     <id>GPSOAuthSharp.NetCore</id>
-    <version>1.0.1</version>
+    <version>1.0.1.2</version>
     <title>GPSOAuthSharp.NetCore</title>
     <authors>cormaltes</authors>
     <description>
       GPSOAuthSharp
     </description>
+    <language>fr-FR</language>
+    <tags>DATA</tags>
+    <dependencies>
+      <dependency id="NETStandard.Library" version="1.6.0"/>
+      <dependency id="System.Net.Http" version="4.1.0"/>
+      <dependency id="System.Collections.Specialized" version="4.0.1"/>
+      <dependency id="System.Net.Requests" version="4.0.11"/>
+      <dependency id="System.Security.Cryptography.Csp" version="4.0.0"/>
+      <dependency id="" version=""/>
+    </dependencies>
   </metadata>
   <files>
     <file src="lib\" target="lib" />

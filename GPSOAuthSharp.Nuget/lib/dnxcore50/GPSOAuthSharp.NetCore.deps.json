@@ -1,16 +1,16 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.5/",
-    "signature": "07aec458d39363cbd33d0683267fced47cb44e85"
+    "signature": "c6802116390f1cb318107fff2cd72b35b89773f7"
   },
   "compilationOptions": {},
   "targets": {
     ".NETStandard,Version=v1.5": {},
     ".NETStandard,Version=v1.5/": {
-      "GPSOAuthSharp.NetCore/1.0.0": {
+      "GPSOAuthSharp.NetCore/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "System.Collections.Specialized": "4.0.1-rc2-24027",
+          "System.Collections.Specialized": "4.0.1",
           "System.Net.Http": "4.1.0",
           "System.Net.Requests": "4.0.11",
           "System.Security.Cryptography.Csp": "4.0.0"
@@ -135,7 +135,7 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Collections.NonGeneric/4.0.1-rc2-24027": {
+      "System.Collections.NonGeneric/4.0.1": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.0.11",
           "System.Globalization": "4.0.11",
@@ -148,11 +148,11 @@
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
         }
       },
-      "System.Collections.Specialized/4.0.1-rc2-24027": {
+      "System.Collections.Specialized/4.0.1": {
         "dependencies": {
-          "System.Collections.NonGeneric": "4.0.1-rc2-24027",
+          "System.Collections.NonGeneric": "4.0.1",
           "System.Globalization": "4.0.11",
-          "System.Globalization.Extensions": "4.0.1-rc2-24027",
+          "System.Globalization.Extensions": "4.0.1",
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
           "System.Runtime.Extensions": "4.1.0",
@@ -219,8 +219,9 @@
           "System.Runtime": "4.1.0"
         }
       },
-      "System.Globalization.Extensions/4.0.1-rc2-24027": {
+      "System.Globalization.Extensions/4.0.1": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
           "System.Globalization": "4.0.11",
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
@@ -628,7 +629,7 @@
     }
   },
   "libraries": {
-    "GPSOAuthSharp.NetCore/1.0.0": {
+    "GPSOAuthSharp.NetCore/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -688,15 +689,15 @@
       "serviceable": true,
       "sha512": "sha512-pjqv1DfjR+tWtrCGgEJJ7eWyZnPogwbPbOp1ym+BUgmtP7DlqaETuFq4sG5BVkqeRV1kXKTHa1zPDlDYz5wQ6w=="
     },
-    "System.Collections.NonGeneric/4.0.1-rc2-24027": {
+    "System.Collections.NonGeneric/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-txfwF71o0wY1QkQQqY9svm0+w12fZla/DBNMV1lpcuqzipu854Qg40meH2aPU3qjnHbRvdyM9dglYyE6/RachQ=="
+      "sha512": "sha512-hMxFT2RhhlffyCdKLDXjx8WEC5JfCvNozAZxCablAuFRH74SCV4AgzE8yJCh/73bFnEoZgJ9MJmkjQ0dJmnKqA=="
     },
-    "System.Collections.Specialized/4.0.1-rc2-24027": {
+    "System.Collections.Specialized/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1qeRkJqzH2NXFxOV0IehUM4iMvpZBjUnL2JTEocOIdLXoUc3VDiFaQK/Z7GfmZrvNrA0OBq5iJqFReitxH5sZQ=="
+      "sha512": "sha512-/HKQyVP0yH1I0YtK7KJL/28snxHNH/bi+0lgk/+MbURF6ULhAE31MDI+NZDerNWu264YbxklXCCygISgm+HMug=="
     },
     "System.Console/4.0.0": {
       "type": "package",
@@ -733,10 +734,10 @@
       "serviceable": true,
       "sha512": "sha512-PpgYOSVIe+OB/2uKocOxBeoHCzscSc0yer32JYF0mfsLUGH2IwKmGacdlirPChKgknl1U0gJO4G6lALypy5JPQ=="
     },
-    "System.Globalization.Extensions/4.0.1-rc2-24027": {
+    "System.Globalization.Extensions/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BaZplqKspB1c99AV3QybawRhLjzAOmPZGaiGimlCMD3KmztARHW2Im7gD2ECxjk+pGkyML7GuiGEuJae83Ky0w=="
+      "sha512": "sha512-yLURit3dkdGAnjbJHIqWiuKdD8fNiZOUTDDYFH/qWXEC35GnwZ61cMbktwMXFMDt18kGqhoRNIL8G3R195AcqA=="
     },
     "System.IO/4.1.0": {
       "type": "package",

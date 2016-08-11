@@ -303,7 +303,7 @@ Else {
 
 # Check if package should be published
 if ($Publish -and $global:ExitCode -eq 0) {
-	Publish
+	#Publish
 }
 
 Write-Log " "
