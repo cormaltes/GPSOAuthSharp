@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>GPSOAuthSharp.NetCore</id>
-    <version>1.0.1.2</version>
-    <title>GPSOAuthSharp.NetCore</title>
+    <id>GPSOAuthSharpNetCore</id>
+    <version>1.0.1.5</version>
+    <title>GPSOAuthSharpNetCore</title>
     <authors>cormaltes</authors>
-    <description>
-      GPSOAuthSharp
-    </description>
-    <language>fr-FR</language>
-    <tags>DATA</tags>
+    <licenseUrl>https://www.gnu.org/copyleft/lesser.html</licenseUrl>
+    <projectUrl>https://github.com/cormaltes/GPSOAuthSharp</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET Core client library for Google Play Services OAuth / forked from vemacs/GPSOAuthSharp</description>
+    <tags>google, googleplay, playservices, oauth</tags>
     <dependencies>
       <dependency id="NETStandard.Library" version="1.6.0"/>
       <dependency id="System.Net.Http" version="4.1.0"/>
       <dependency id="System.Collections.Specialized" version="4.0.1"/>
       <dependency id="System.Net.Requests" version="4.0.11"/>
       <dependency id="System.Security.Cryptography.Csp" version="4.0.0"/>
-      <dependency id="" version=""/>
     </dependencies>
   </metadata>
   <files>
