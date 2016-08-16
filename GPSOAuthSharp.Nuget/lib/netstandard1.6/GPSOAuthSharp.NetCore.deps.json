@@ -1,19 +1,20 @@
 {
   "runtimeTarget": {
-    "name": ".NETStandard,Version=v1.5/",
-    "signature": "c6802116390f1cb318107fff2cd72b35b89773f7"
+    "name": ".NETStandard,Version=v1.6/",
+    "signature": "877feda6d6a64923ee223efd5c8e20c7eb5f815f"
   },
   "compilationOptions": {},
   "targets": {
-    ".NETStandard,Version=v1.5": {},
-    ".NETStandard,Version=v1.5/": {
+    ".NETStandard,Version=v1.6": {},
+    ".NETStandard,Version=v1.6/": {
       "GPSOAuthSharp.NetCore/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
           "System.Collections.Specialized": "4.0.1",
           "System.Net.Http": "4.1.0",
           "System.Net.Requests": "4.0.11",
-          "System.Security.Cryptography.Csp": "4.0.0"
+          "System.Security.Cryptography.Cng": "4.2.0",
+          "System.Security.Cryptography.OpenSsl": "4.0.0"
         },
         "runtime": {
           "GPSOAuthSharp.NetCore.dll": {}
@@ -88,6 +89,12 @@
           "Microsoft.NETCore.Targets": "1.0.1"
         }
       },
+      "runtime.native.System.Net.Http/4.0.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1"
+        }
+      },
       "runtime.native.System.Security.Cryptography/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -97,6 +104,9 @@
       "System.AppContext/4.1.0": {
         "dependencies": {
           "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.AppContext.dll": {}
         }
       },
       "System.Buffers/4.0.0": {
@@ -295,36 +305,67 @@
       "System.Linq/4.1.0": {
         "dependencies": {
           "System.Collections": "4.0.11",
-          "System.Runtime": "4.1.0"
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
       "System.Linq.Expressions/4.1.0": {
         "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.ObjectModel": "4.0.12",
           "System.Reflection": "4.1.0",
-          "System.Runtime": "4.1.0"
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit.ILGeneration": "4.0.1",
+          "System.Reflection.Emit.Lightweight": "4.0.1",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.Linq.Expressions.dll": {}
         }
       },
       "System.Net.Http/4.1.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
-          "Microsoft.Win32.Primitives": "4.0.1",
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
           "System.Diagnostics.DiagnosticSource": "4.0.0",
           "System.Diagnostics.Tracing": "4.1.0",
           "System.Globalization": "4.0.11",
+          "System.Globalization.Extensions": "4.0.1",
           "System.IO": "4.1.0",
-          "System.IO.Compression": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
           "System.Net.Primitives": "4.0.11",
           "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
           "System.Runtime.Extensions": "4.1.0",
           "System.Runtime.Handles": "4.0.1",
           "System.Runtime.InteropServices": "4.1.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.OpenSsl": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
           "System.Security.Cryptography.X509Certificates": "4.1.0",
           "System.Text.Encoding": "4.0.11",
           "System.Threading": "4.0.11",
-          "System.Threading.Tasks": "4.0.11"
+          "System.Threading.Tasks": "4.0.11",
+          "runtime.native.System": "4.0.0",
+          "runtime.native.System.Net.Http": "4.0.1",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
         }
       },
       "System.Net.Primitives/4.0.11": {
@@ -394,6 +435,39 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "System.Reflection.Emit/4.0.1": {
+        "dependencies": {
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit.ILGeneration": "4.0.1",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+        }
+      },
+      "System.Reflection.Emit.ILGeneration/4.0.1": {
+        "dependencies": {
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.0.1": {
+        "dependencies": {
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit.ILGeneration": "4.0.1",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Reflection.Extensions/4.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -407,6 +481,15 @@
           "Microsoft.NETCore.Platforms": "1.0.1",
           "Microsoft.NETCore.Targets": "1.0.1",
           "System.Runtime": "4.1.0"
+        }
+      },
+      "System.Reflection.TypeExtensions/4.1.0": {
+        "dependencies": {
+          "System.Reflection": "4.1.0",
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         }
       },
       "System.Resources.ResourceManager/4.0.1": {
@@ -472,9 +555,34 @@
       },
       "System.Security.Cryptography.Algorithms/4.2.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
           "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
-          "System.Security.Cryptography.Primitives": "4.0.0"
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
+        }
+      },
+      "System.Security.Cryptography.Cng/4.2.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11"
         }
       },
       "System.Security.Cryptography.Csp/4.0.0": {
@@ -510,6 +618,26 @@
           "runtime.native.System.Security.Cryptography": "4.0.0"
         }
       },
+      "System.Security.Cryptography.OpenSsl/4.0.0": {
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
+        }
+      },
       "System.Security.Cryptography.Primitives/4.0.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.0.11",
@@ -526,10 +654,31 @@
       },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Globalization.Calendars": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Resources.ResourceManager": "4.0.1",
           "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
           "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
           "System.Security.Cryptography.Algorithms": "4.2.0",
-          "System.Security.Cryptography.Encoding": "4.0.0"
+          "System.Security.Cryptography.Cng": "4.2.0",
+          "System.Security.Cryptography.Csp": "4.0.0",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.OpenSsl": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11",
+          "runtime.native.System": "4.0.0",
+          "runtime.native.System.Net.Http": "4.0.1",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
         }
       },
       "System.Text.Encoding/4.0.11": {
@@ -549,7 +698,15 @@
       },
       "System.Text.RegularExpressions/4.1.0": {
         "dependencies": {
-          "System.Runtime": "4.1.0"
+          "System.Collections": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.Text.RegularExpressions.dll": {}
         }
       },
       "System.Threading/4.0.11": {
@@ -663,6 +820,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-5CAjQVvGrVKmX/unExGUZd01/MM+zuoI5p19AffA2EuLkvnEDLzuSmx1ea2KhyLAsOcQdj8ruMDfRD+/N8EivA=="
+    },
+    "runtime.native.System.Net.Http/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yXvivJZjzlsqIaUdYveOrDh7zK8yEwI2e6eV5BiBrQhZSGnnp2XCwbecINbugYiQNu/63OK/YIVTKIdjV4ywCQ=="
     },
     "runtime.native.System.Security.Cryptography/4.0.0": {
       "type": "package",
@@ -809,6 +971,21 @@
       "serviceable": true,
       "sha512": "sha512-JCKANJ0TI7kzoQzuwB/OoJANy1Lg338B6+JVacPl4TpUwi3cReg3nMLplMq2uqYfHFQpKIlHAUVAJlImZz/4ng=="
     },
+    "System.Reflection.Emit/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XxY2ZjtrO7x2c88gSFkkc1beTOCs+ysBtG9gHRYGbShvOZFDj4RCkvSmf3CtUT1bSFfjla2rPL1aujvlX/iT8w=="
+    },
+    "System.Reflection.Emit.ILGeneration/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qh5H6pXhyd6AftyWyfuPJEiWShS+GGuTj5WA1ZE8Tubm/q6zj33TJzHU3bBqLbcKf1ephb/BkKZmjDD8pYrgFg=="
+    },
+    "System.Reflection.Emit.Lightweight/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SDuL+jAzAl0c0GETfGhe47+4pElXX+0E7CS7sXHyUEqfQYJwXdZb7uRp1/74Gy4ZrHihUSUzxeL0iFYGrGK3cA=="
+    },
     "System.Reflection.Extensions/4.0.1": {
       "type": "package",
       "serviceable": true,
@@ -818,6 +995,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-or7/9q+cIruA/AD2rCTcGFbraqcXbLkQmPeryluoZrNmlnO3vo0Lvitcr//h5ZeRl9IVCm9PrHbXGWEEC0kCPw=="
+    },
+    "System.Reflection.TypeExtensions/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TjmqO/d8OtGB4IZDpCRs+FnA8NAbNdcVyXSBlopCc723eMJnJHFzUhyKzAnBftglrkMjiXOlhn/quBRxZgvF7A=="
     },
     "System.Resources.ResourceManager/4.0.1": {
       "type": "package",
@@ -859,6 +1041,11 @@
       "serviceable": true,
       "sha512": "sha512-7ZRImOYerLWw9Xd9vYa2pV88wntWLEEr5kf7DFMa99euYZpe5BlOyXGZjb6lmICFJw/jyQ+H0zf0EB3+fpTCkw=="
     },
+    "System.Security.Cryptography.Cng/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cA+91Je1Z8o3yncKhGSHNmvYnRbOU7hEL/qjbJIxM1JYXpG3ODBH24slrYRzEzPLLP0ZzwrKeZNVhVuLhfzxAA=="
+    },
     "System.Security.Cryptography.Csp/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -868,6 +1055,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lrkiyY3fgdwPpNHCs07jgqOsz783cfhpyoMvwa3rA5R3/Mu7+69s+j5LKJFIPn7eC0VDc4vT/3pg5lWVMhaqFA=="
+    },
+    "System.Security.Cryptography.OpenSsl/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6K+banpDXO2HyL8tJfCEkf9G9G4rXb78U4QenG32k8v4Z0V1Kgj8lT8sa0bFQC0jrvX97QjE4ZuZy9cm66Wibg=="
     },
     "System.Security.Cryptography.Primitives/4.0.0": {
       "type": "package",

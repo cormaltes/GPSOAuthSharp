@@ -2,6 +2,7 @@
 using DankMemes.GPSOAuthSharp;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace GPSOAuthDemo
 {

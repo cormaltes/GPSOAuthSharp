@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -37,7 +38,7 @@ namespace DankMemes.GPSOAuthSharp
         // _perform_auth_request
         private Dictionary<string, string> PerformAuthRequest(Dictionary<string, string> data)
         {
-            var nvc = new Dictionary<string,string>();
+            var nvc = new Dictionary<string, string>();
             foreach (var kvp in data)
             {
                 nvc.Add(kvp.Key, kvp.Value);
@@ -150,13 +151,16 @@ namespace DankMemes.GPSOAuthSharp
         // signature
         public static string CreateSignature(string email, string password, RSAParameters key)
         {
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-            rsa.ImportParameters(key);
             SHA1 sha1 = SHA1.Create();
             byte[] prefix = { 0x00 };
             byte[] hash = sha1.ComputeHash(GoogleKeyUtils.KeyToStruct(key)).Take(4).ToArray();
-            byte[] encrypted = rsa.Encrypt(Encoding.UTF8.GetBytes(email + "\x00" + password), true);
-            return DataTypeUtils.UrlSafeBase64(DataTypeUtils.CombineBytes(prefix, hash, encrypted));
+
+            using (var rsa = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? (RSA)new RSACng() : (RSA)new RSAOpenSsl())
+            {
+                rsa.ImportParameters(key);
+                byte[] encrypted = rsa.Encrypt(Encoding.UTF8.GetBytes(email + "\x00" + password), RSAEncryptionPadding.OaepSHA1);
+                return DataTypeUtils.UrlSafeBase64(DataTypeUtils.CombineBytes(prefix, hash, encrypted));
+            }
         }
     }
 
